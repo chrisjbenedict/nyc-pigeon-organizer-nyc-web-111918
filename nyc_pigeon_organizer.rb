@@ -15,7 +15,7 @@ def nyc_pigeon_organizer(data)
         # add the attribute hash to the name hash with an array value
         pigeon_list[name][attribute] ||= [] #pigeon_list[name][attribute] OR pigeon_list[name][attribute] = [] if it's falsey
         # push the choice (of color, gender, lives) as a str value onto the corresponding attribute of the corresponding pigeon
-        pigeon_list[name][attribute].push(choice.to_s) 
+        pigeon_list[name][attribute].push(choice.to_s)
       end
     end
   end
