@@ -10,8 +10,8 @@ def nyc_pigeon_organizer(data)
     choices.each do |choice, names|
       #iterate over each pigeon name within each choice
       names.each do |name|
-        pigeon_list[name]
-        pigeon_list[name][attribute]
+        pigeon_list[name] ||= {}
+        pigeon_list[name][attribute] ||= []
         pigeon_list[name][attribute] << choice.to_s
       end
     end
