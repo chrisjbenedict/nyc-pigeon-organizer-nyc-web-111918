@@ -4,17 +4,17 @@ def nyc_pigeon_organizer(data)
   # write your code here!
   # creat an empty hash 'pigeon_list'
   pigeon_list = {}
-  # iterate over the data and for each attribute
+  # within the data, iterate over each attribute, looking at each choice
   data.each do |attribute, choices|
-    # iterate over each choice
+    # iterate over each choice within each attribute, looking at each name
     choices.each do |choice, names|
-      #iterate over each pigeon name within each choice
+      # iterate over each name within each choice
       names.each do |name|
-        pigeon_list[name] ||= {}
-        pigeon_list[name][attribute] ||= []
-        pigeon_list[name][attribute] << choice.to_s
+        pigeon_list[name] ||= {} #pigeon_list[name] OR pigeon_list[name] = {} if it's falsey
+        pigeon_list[name][attribute] ||= [] #pigeon_list[name][attribute] OR pigeon_list[name][attribute] = [] if it's falsey
+        pigeon_list[name][attribute].push(choice.to_s) #push the choice (color, gender, lives) as a str key onto the corresponding pigeon 
       end
     end
   end
-  pigeon_list
+  pigeon_list #return pigeon_list
 end
