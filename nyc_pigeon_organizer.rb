@@ -12,7 +12,7 @@ def nyc_pigeon_organizer(data)
       names.each do |name|
         pigeon_list[name] ||= {} #pigeon_list[name] OR pigeon_list[name] = {} if it's falsey
         pigeon_list[name][attribute] ||= [] #pigeon_list[name][attribute] OR pigeon_list[name][attribute] = [] if it's falsey
-        pigeon_list[name][attribute].push(choice.to_s) #push the choice (color, gender, lives) as a str key onto the corresponding pigeon 
+        pigeon_list[name][attribute].push(choice.to_s) #push the choice (color, gender, lives) as a str key onto the corresponding pigeon
       end
     end
   end
